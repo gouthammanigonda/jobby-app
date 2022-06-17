@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
@@ -54,6 +55,10 @@ class Login extends Component {
 
   render() {
     const {showErrorMsg, errorMsg} = this.state
+    const token = Cookies.get('jwt_token')
+    if (token !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="bg-container">
         <div className="sub-container">
