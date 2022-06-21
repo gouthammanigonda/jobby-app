@@ -234,7 +234,7 @@ class Jobs extends Component {
 
   renderLoadingView = () => (
     <div testid="loader" className="loader-container">
-      <Loader type="TailSpin" color="#00BFFF" height={60} width={60} />
+      <Loader type="ThreeDots" color="#00BFFF" height={50} width={50} />
     </div>
   )
 
@@ -361,7 +361,7 @@ class Jobs extends Component {
   }
 
   onClickRetryJobs = () => {
-    this.setState({retry: true}, this.getJobs)
+    this.getJobs()
   }
 
   renderJobsFailureView = () => (
@@ -419,7 +419,7 @@ class Jobs extends Component {
                     onChange={this.onChangeSearchInput}
                   />
                   <button
-                    textid="searchButton"
+                    testid="searchButton"
                     type="button"
                     htmlFor="search-filter"
                     className="search-label"

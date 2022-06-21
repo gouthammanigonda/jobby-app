@@ -98,7 +98,7 @@ class JobItemDetails extends Component {
   )
 
   onClickRetryBTN = () => {
-    this.setSate({retry: true}, this.getJobDetails)
+    this.getJobDetails()
   }
 
   renderFailureView = () => (
