@@ -335,7 +335,7 @@ class Jobs extends Component {
   }
 
   onClickRetryBTN = () => {
-    this.setState({retry: true}.this.getProfileDetails)
+    this.getProfileDetails()
   }
 
   renderProfileFailureView = () => (
